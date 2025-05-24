@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 240, 242, 245;
+  --background-end-rgb: 243, 244, 246;
+  --primary-color: 79, 70, 229;
+  --primary-hover: 67, 56, 202;
+  --secondary-color: 91, 33, 182;
+  --secondary-hover: 76, 29, 149;
+  --accent-color: 59, 130, 246;
+  --accent-hover: 37, 99, 235;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+/* Custom styles */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #4f46e5, #7c3aed);
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Subtle white grid for hero section */
+.bg-hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Placeholder styles */
+.placeholder-event {
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Animation utilities */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
